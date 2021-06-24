@@ -30,6 +30,7 @@ class SessionController extends Controller{
         error_log('INFO [SESSIONCONTROLLER] => validateSession()');
         if($this->existsSession()){
             $role = $this->getUserSessionData()->getPerfil();
+            error_log('INFO [SESSIONCONTROLLER] => validateSession() -> perfil::' .$role);
             // validamos al acceso publico
             if($this->isPublic()){
                 $this->redirectDefaultSiteByRole($role);
@@ -49,15 +50,15 @@ class SessionController extends Controller{
         error_log('INFO [SESSIONCONTROLLER] => existsSession()');
         if(!$this->session->exists()) return false;
         if($this->session->getCurrentUser() == null) return false;
-        $userid = $this->session->getCurrentUser();
-        if($userid) return true;
+        $user = $this->session->getCurrentUser();
+        if($user != null) return true;
         return false;
     }
     function getUserSessionData(){
         error_log('INFO [SESSIONCONTROLLER] => getUserSessionData()');
-        $user = $this->session->getCurrentUser();
-        $this->user = new UserModel();
-        $this->user->getId($user);
+        $this->user = $this->session->getCurrentUser();
+        /* $this->user = new UserModel();
+        $this->user->getId($user); */
         return $this->user;
     }
     function isPublic(){
@@ -86,13 +87,13 @@ class SessionController extends Controller{
     function authorizeAccess($role){
         error_log('INFO [SESSIONCONTROLLER] => authorizeAccess() -> perfil =  ' .  $role);
         switch($role){
-            case 100:
+            case 'cliente':
                 $this->redirect($this->defaultSites['cliente'],[]);
                 break;
-            case 200:
+            case 'tecnico':
                 $this->redirect($this->defaultSites['tecnico'],[]);
                 break;
-            case 300:
+            case 'colaborador':
                 $this->redirect($this->defaultSites['colaborador'],[]);
                 break;
         }

@@ -12,7 +12,7 @@ class Home extends SessionController{
         error_log('INFO [HOME] => render()');
         // redirecciona a la carpeta vista pero la url sera con el nombre de la Clase Controller
         $this->user = $this->getUserSessionData();
-        error_log('INFO [HOME] => render() -> datos de la persona : ' . $this->user->getPersona());
+        error_log('INFO [HOME] => render() -> datos de la persona : ' . $this->user->getPerfil());
         if($this->user->getPerfil() == 'cliente')
             $this->view->render('cliente/home' , [ 'user' => $this->user]);
         else if($this->user->getPerfil() =='tecnico')

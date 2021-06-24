@@ -17,11 +17,11 @@ class Login extends SessionController{
     function autenticacion(){
         error_log('Login::autenticacion()');
         if($this->existPOST(['correo','contraseña','perfilCuenta'])){
-            error_log('Login::autenticacion() 1111');
+            
             $correo = $this->getPost('correo');
             $contraseña = $this->getPost('contraseña');
             $perfilCuenta = $this->getPost('perfilCuenta');
-
+           
             if( $correo == ''   || empty($correo) ||
                 $contraseña == ''   || empty($contraseña) ||
                 $perfilCuenta == ''   || empty($perfilCuenta) ){

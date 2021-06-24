@@ -18,7 +18,7 @@ class UserModel extends Model implements IModel{
         $this->imgPerfil = 'public/img/perfil/userDefecto.png';
         $this->estado = 0;
         $this->perfil = 0;
-        $this->persona = new UserModel();
+        $this->persona = '';
     }
     public function save(){
         error_log('INFO [USERMODEL] => save()');
@@ -182,12 +182,19 @@ class UserModel extends Model implements IModel{
         $persona = new PersonaModel();
         try{
             $query = $this->prepare(
-                'SELECT * FROM usuario U 
-                    INNER JOIN persona P 
-                        ON P.idPersona = U.idPersona
-                    INNER JOIN usuarioperfil UP 
-                        ON U.idUsuario=UP.idUsuario
-                WHERE U.correo = :correo AND UP.idPerfil = :perfilCuenta' );
+                "SELECT U.idUsuario,U.idPersona,U.correo,U.imgPerfil,U.contraseña,
+                case U.estado when 1 then 'habilitado' when 2 then 'deshabilitado' end as estadoUsuario,
+                P.nombres,P.apPaterno,P.apMaterno,P.direccion,P.celular,P.regDate,P.tipoDoc,P.numDoc,
+                case UP.estado when 1 then 'habilitado' when 2 then 'deshabilitado' end as estadoPerfil ,
+                UP.descripcion as descripPerfil , Pf.descripcion as perfil
+                FROM usuario U 
+                INNER JOIN persona P 
+                ON P.idPersona = U.idPersona
+                INNER JOIN usuarioperfil UP 
+                ON U.idUsuario=UP.idUsuario
+                INNER JOIN perfil Pf
+                ON Pf.idPerfil = UP.idPerfil
+                WHERE U.correo = :correo AND UP.idPerfil = :perfilCuenta" );
             $query->execute(['correo' => $correo , 'perfilCuenta' => $perfilCuenta]);
 
             if($query->rowCount() == 1){
