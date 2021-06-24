@@ -58,7 +58,6 @@ class SessionController extends Controller{
         $user = $this->session->getCurrentUser();
         $this->user = new UserModel();
         $this->user->getId($user);
-        error_log('INFO [SESSIONCONTROLLER] => getUserSessionData() -> perfil = ' . $this->user->getPerfil());
         return $this->user;
     }
     function isPublic(){

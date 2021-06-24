@@ -18,7 +18,7 @@ class UserModel extends Model implements IModel{
         $this->imgPerfil = 'public/img/perfil/userDefecto.png';
         $this->estado = 0;
         $this->perfil = 0;
-        $this->persona = new PersonaModel();
+        $this->persona = new UserModel();
     }
     public function save(){
         error_log('INFO [USERMODEL] => save()');

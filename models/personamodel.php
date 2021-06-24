@@ -24,6 +24,9 @@ class PersonaModel extends Model implements IModel {
         $this->celular = '';
         $this->regDate = '';
     }
+    public function __toString(){
+        return "nombres -> " .$this->getNombres();
+    }
     public function save(){
         error_log('INFO [PERSONAMODEL] => save()');
         try{

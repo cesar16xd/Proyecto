@@ -17,6 +17,7 @@ class Login extends SessionController{
     function autenticacion(){
         error_log('Login::autenticacion()');
         if($this->existPOST(['correo','contraseña','perfilCuenta'])){
+            error_log('Login::autenticacion() 1111');
             $correo = $this->getPost('correo');
             $contraseña = $this->getPost('contraseña');
             $perfilCuenta = $this->getPost('perfilCuenta');
@@ -27,7 +28,9 @@ class Login extends SessionController{
                 $this->redirect('login',['error' => ErrorMessages::ERROR_REGISTRAR_NUEVO_USUARIO_EMPTY ]);
             }
             $user = new UserModel();
+            error_log('Login::autenticacion()');
             $user = $user->login($correo,$contraseña,$perfilCuenta);
+            error_log('Login::autenticacion()');
             if($user != NULL){
                 if($user->getCodRpta() == 1)
                     $this->initialize($user);
