@@ -1,0 +1,34 @@
+{
+    "sites" : [
+        {
+            "site": "login",
+            "access": "public",
+            "role": ""
+        },
+        {
+            "site": "registrar",
+            "access": "public",
+            "role": ""
+        },
+        {
+            "site": "home",
+            "access": "private",
+            "role": "cliente"
+        },
+        {
+            "site": "home",
+            "access": "private",
+            "role": "tecnico"
+        },
+        {
+            "site": "home",
+            "access": "private",
+            "role": "colaborador"
+        }
+    ],
+    "default-sites":{
+        "cliente" : "home",
+        "tecnico" : "home",
+        "colaborador" : "home"
+    }
+}

@@ -1,0 +1,130 @@
+
+body {
+    font-family: 'Spartan', sans-serif;
+    
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    color: black;
+}
+
+p {
+    color:black;
+    font-weight:bold;
+}
+
+p.centrado {
+    text-align: center;
+}
+
+a {
+    color:black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+    color:#4717F6;
+}
+
+.form-control {
+    min-height: 3.125rem;
+    width: 100%;
+    background-color: #E6DFDC;
+    border-color: black;
+    border-radius: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-control:focus {
+    background-color: #E6DFDC;
+    color: black;
+    text-align: center;
+}
+
+.form-control::-webkit-input-placeholder{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight:normal;
+}
+
+.form-check-input:checked {
+    border-color: #7f7e80;
+    background-color: #4717F6;
+}
+
+
+.img-1 {
+    background-image: url('../img/imagen1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.img-2 {
+    background-image: url('../img/imagen2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.img-3 {
+    background-image: url('../img/imagen3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.img-4 {
+    background-image: url('../img/imagen4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.btn {
+    min-height: 3.125rem;
+    font-weight: 600;
+}
+
+#btnSubmit{
+    background-color: #4717F6;
+    color:white;
+    border-radius: 60px;
+    width: 75%;
+}
+
+#titleLogin{
+    color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* password css */
+#eye{
+    color: #110e0e;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* botones de redes sociales */
+button.btn-outline-secondary:hover{
+    background-color: transparent;
+}
+
+button.btn-outline-secondary:hover  i.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  button.btn-outline-secondary:hover  i.fa-facebook-f {
+    background: #1976D2;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }

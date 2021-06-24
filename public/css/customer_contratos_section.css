@@ -1,0 +1,96 @@
+body{
+ background-color:#E7DFDD;
+ margin: 0;
+ padding: 0;
+}
+
+/* --------------  PANEL IZQUIERDO ----------- */
+.left{
+ height: 100vh;
+ background-color: #EEEEEE;
+ max-width: 285px!important;
+ display:flex;
+ flex-direction: column;
+ align-items: center;
+ position: fixed;
+ /* border-right : 1px solid black;
+ box-shadow : 3px 3px 15px  black!important; */
+}
+
+.picture_profile{
+ margin-top: 110px;
+}
+.name-user{
+ font-size: 20px;
+ margin-top: 35px;
+}
+.close_session{
+ font-size: 20px;
+ color: #E7DFDD;
+ background-color:black;
+ border-radius: 18px;
+ height:34px;
+ width: 168px;
+ cursor: pointer;
+ transition: 0.5s;
+}
+.close_session:hover{
+ transform: scale(1.05);
+}
+
+.option_pane{
+ display:flex;
+ flex-direction: column;
+ align-items: center;
+ margin-top:70px;
+}
+
+.option_pane a{
+ text-decoration: none;
+ color: #707070;
+ font-size: 20px;
+ padding:8px;
+ display:flex;
+ align-items: center;
+ 
+}
+.option_pane a:hover{
+ color: black;
+ font-weight: bold;
+}
+.option_pane a:before{
+ margin-right: 20px;
+
+}
+.Mi_Perfil:before{
+ content: url(../img/Mi_Perfil.png);
+}
+.Contratos::before{
+ content: url(../img/Contratos_black.png);
+}
+.Tecnicos:before{
+ content: url(../img/Tecnico.png);
+}
+
+.right{
+ height: 100vh;
+ background-color:#E7DFDD;
+ display:flex;
+ flex-direction: column;
+ align-items: center;
+ margin-left: 300px;
+}
+.title{
+ font-size: 36px;
+ font-weight: bold;
+ margin-top:25px;
+}
+
+.content_table{
+ width: 810px;
+ margin-top: 140px;
+}
+thead th{
+ font-size:20px;
+ font-weight: bold;
+}

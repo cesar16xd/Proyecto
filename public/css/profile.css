@@ -1,0 +1,250 @@
+body{
+    background-color:#E7DFDD;
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------  PANEL IZQUIERDO ----------- */
+.left{
+    background-color: #EEEEEE;
+}
+.picture_profile{
+    padding-top: 5rem;
+}
+
+.imagenPerfil{
+    width: 50%;
+    border-radius: 50%;
+}
+
+.name-user{
+ font-size: 20px;
+ margin-top: 35px;
+}
+
+.option_pane{
+ display:flex;
+ flex-direction: column;
+ align-items: center;
+ margin-top:70px;
+}
+
+.option_pane a{
+ text-decoration: none;
+ color: #707070;
+ font-size: 20px;
+ padding:8px;
+ display:flex;
+ align-items: center;
+ 
+}
+.option_pane a:hover{
+ color: black;
+ font-weight: bold;
+}
+.option_pane a:before{
+ margin-right: 20px;
+
+}
+.Mi_Perfil:before{
+ content: url(../img/Mi_Perfil_balck.png);
+}
+.Contratos::before{
+ content: url(../img/Contratos.png);
+}
+.Tecnicos:before{
+ content: url(../img/Tecnico.png);
+}
+
+/* --------------  PANEL DERECHO ----------- */
+.right{
+ background-color:#E7DFDD;
+}
+
+.title{
+ font-size: 36px;
+ font-weight: bold;
+ margin-top:25px;
+}
+
+.change_profile{
+ margin-top: 20px;
+}
+
+.camera{
+ position: absolute;
+ margin-top: 150px;
+ margin-left: -10px;
+}
+
+.client_data{
+ width: 600px!important;
+ font-size: 20px;
+ margin-top:70px;
+}
+.client_data p{
+ color: #707070!important;
+}
+
+.edit{
+ padding:0;
+ margin: 0;
+}
+.change_password{
+ padding:0;
+ margin: 0;
+}
+/* .edit::after{
+ content: url(../img/edit.png);
+ margin-left: 12px;
+}
+.change_password::after{
+ content: url(../img/password.png);
+ margin-left: 12px;
+} */
+.buttons{
+ margin-top: 80px;
+ width: 640px;
+ display:flex;
+ flex-direction: row;
+ justify-content: space-evenly ;
+}
+
+.btn{
+ color: #FFFFFF;
+ background-color: #f3a418 ;
+ width:266px;
+ height:42px;
+ border-radius: 21px;
+ font-size: 20px;
+ box-shadow: 2px 3px 6px #777678ce;
+ transition: 0.5s;
+}
+
+.btn-dark{
+    color: #FFFFFF;
+    background-color: black ;
+    width:266px;
+    height:42px;
+    border-radius: 21px;
+    font-size: 20px;
+    box-shadow: 2px 3px 6px #777678ce;
+    transition: 0.5s;
+   }
+
+.btn:hover{
+ transform:scale(1.05);
+ color:#FFFFFF;
+}
+
+.modal-bodyy {
+ padding:20px;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ padding-bottom: 10px;
+}
+.modal-headerr{
+ /* padding:20px; */
+ display: flex!important;
+ margin-top: 20px;
+ margin-bottom: 20px;
+ margin-right: 5px;
+ justify-content: space-between;
+}
+.modal-headerr h5{
+ margin-top: 10px;
+ margin-left: 32%;
+}
+.modal-headerr h5::before{
+ content: url(../img/edit.png);
+ margin-right: 12px;
+}
+.btn-save{
+ color: #FFFFFF;
+ background-color: #49AB4C ;
+ width:450px;
+ height:30px;
+ border-radius: 21px;
+ font-size: 16px;
+ box-shadow: 2px 3px 6px #777678ce;
+ border:none;
+ cursor:pointer;
+ display:flex;
+ justify-content:center;
+ align-items: center;
+ margin-top:30px;
+ margin-bottom:30px;
+ transition: 0.5s;
+}
+.btn-save:hover{
+ transform:scale(1.05);
+}
+.modal-bodyy label{
+ padding-top: 10px;
+ padding-bottom: 10px;
+ font-size:16;
+ color: black;
+}
+.modal-bodyy input{
+ border:2px solid black ;
+ border-radius: 15px;
+ padding-left: 10px;
+}
+
+.enviar{
+ padding-top: 20px;
+ width:359px;
+ display:flex;
+ justify-content: center;
+ padding-bottom: 10px;
+}
+
+.in_content {
+ width: 359px;
+}
+
+.content {
+margin-left: 5%;
+}
+
+/* modal de cambio de contraseña */
+.modall-headerr{
+ /* padding:20px; */
+ /* display: flex!important; */
+ margin-top: 20px;
+ margin-bottom: 20px;
+ /* align-items: center; */
+}
+.modall-headerr h5{
+ margin-top: 10px;
+ margin-left: 25%;
+}
+.modall-headerr h5::before{
+ content: url(../img/key.png);
+ margin-right: 12px;
+}
+.btn-save1{
+ color: #FFFFFF;
+ background-color: #49AB4C ;
+ width: 243px;
+ height:30px;
+ border-radius: 21px;
+ font-size: 16px;
+ box-shadow: 2px 3px 6px #777678ce;
+ border:none;
+ cursor:pointer;
+ display:flex;
+ justify-content:center;
+ align-items: center;
+ margin-top:30px;
+ margin-bottom:30px;
+ transition: 0.5s;
+}
+
+.btn-save1:hover{
+ transform: scale(1.05);
+}
+.content2 {
+margin-left: 15%;
+}
